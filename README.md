@@ -106,7 +106,6 @@ The recommendation logic is integrated into a Streamlit web application:
 - NumPy
 - Scikit-learn
 
----
 
 ## 5. Installation and Setup
 
