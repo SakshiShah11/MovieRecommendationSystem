@@ -56,7 +56,7 @@ movies_dict= pickle.load(open('movie_dict.pkl','rb'))
 movies = pd.DataFrame(movies_dict)
 
 SIMILARITY_FILE = "similarity.pkl"
-SIMILARITY_URL = "https://drive.google.com/uc?id=12ULsBfI452ZgV0muuDIQZ5dUQB2Whubb?dmr=1&ec=wgc-drive-hero-goto"
+SIMILARITY_URL = "https://drive.google.com/file/d/1MHYUMaeXQWdWx7YxUtA3V_B0dGlqxaHO/view?usp=sharing"
 
 
 
@@ -81,6 +81,7 @@ if st.button("Recommend"):
     with col5:
         st.text(names[4])
         st.image(posters[4])
+
 
 
 
