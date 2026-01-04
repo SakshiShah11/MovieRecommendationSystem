@@ -64,9 +64,9 @@ st.title("Movie Recommendation System")
 
 selected_movie_name= st.selectbox("Select the movie that you like, and I will recommend similar movies",movies['title'].values)
 
-col_btn1, col_btn2, col_btn3 = st.columns([1, 2, 1])
+col_btn1, col_btn2, col_btn3, col_btn4 = st.columns([1, 1, 1, 1])
 
-with col_btn2:
+with col_btn3:
     recommend_clicked = st.button("Recommend")
 
 if recommend_clicked:
@@ -88,6 +88,7 @@ if recommend_clicked:
     with col5:
         st.image(posters[4])
         st.caption(names[4])
+
 
 
 
