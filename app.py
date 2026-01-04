@@ -16,11 +16,16 @@ def fetch_poster(movie_id):
     poster_path = data['poster_path']
     full_path = "https://image.tmdb.org/t/p/w500/" + poster_path
     return full_path
-
+    
 def recommend(movie):
     global similarity, movies
-    movie_idx = movies[movies['title']== movie].index[0] # calculated the index of the movie
-    similarity_array =similarity[movie_idx]
+
+    if similarity is None:
+        movies, similarity = load_data()
+
+    movie_idx = movies[movies['title']== movie].index[0]
+    similarity_array = similarity[movie_idx]
+
 
     movies_list = sorted(list(enumerate(similarity_array)),reverse=True,key=lambda x:x[1])[1:6]
     # sorted the similarity_array of the particular movie in decending order on the basis of score and made tupple of i9ndex and score to identify the movie
@@ -76,6 +81,7 @@ if st.button("Recommend"):
     with col5:
         st.text(names[4])
         st.image(posters[4])
+
 
 
 
