@@ -121,3 +121,6 @@ Due to GitHub file size limitations, the similarity.pkl file is not included in 
 Download the file from Google Drive using the link below:
 
 https://drive.google.com/drive/folders/12ULsBfI452ZgV0muuDIQZ5dUQB2Whubb
+
+## Live app link 
+https://sakshi-movierecommendationsystem.streamlit.app/
