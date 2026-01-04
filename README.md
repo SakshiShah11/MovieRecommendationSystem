@@ -109,7 +109,15 @@ The recommendation logic is integrated into a Streamlit web application:
 
 ## 5. Installation and Setup
 
-### Clone the Repository
-```bash
+Clone the repository using the following command:
+
 git clone https://github.com/sakshishah02/MovieRecommendationSystemWeb.git
+
 cd MovieRecommendationSystemWeb
+
+## 6. Large Model File (similarity.pkl)
+
+Due to GitHub file size limitations, the similarity.pkl file is not included in the repository.
+Download the file from Google Drive using the link below:
+
+https://drive.google.com/drive/folders/12ULsBfI452ZgV0muuDIQZ5dUQB2Whubb
