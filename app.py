@@ -13,6 +13,7 @@ def fetch_poster(movie_id):
     return full_path
 
 def recommend(movie):
+    global similarity, movies
     movie_idx = movies[movies['title']== movie].index[0] # calculated the index of the movie
     similarity_array =similarity[movie_idx]
 
@@ -70,4 +71,5 @@ if st.button("Recommend"):
     with col5:
         st.text(names[4])
         st.image(posters[4])
+
 
