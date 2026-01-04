@@ -1,8 +1,13 @@
 import streamlit as st
 import pickle
 import pandas as pd
-
+import os
+import gdown
 import requests
+
+
+similarity = None
+movies = None
 
 def fetch_poster(movie_id):
     url = "https://api.themoviedb.org/3/movie/{}?api_key=8265bd1679663a7ea12ac168da84d2e8&language=en-US".format(movie_id)
@@ -71,5 +76,6 @@ if st.button("Recommend"):
     with col5:
         st.text(names[4])
         st.image(posters[4])
+
 
 
