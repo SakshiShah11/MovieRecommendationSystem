@@ -44,7 +44,8 @@ def recommend(movie):
 def load_data():
     if not os.path.exists(SIMILARITY_FILE):
         with st.spinner("Downloading similarity model..."):
-            gdown.download(SIMILARITY_URL, SIMILARITY_FILE, quiet=False)
+            gdown.download(SIMILARITY_URL, SIMILARITY_FILE, quiet=False, fuzzy=True)
+
 
     movies_dict = pickle.load(open("movie_dict.pkl", "rb"))
     similarity = pickle.load(open(SIMILARITY_FILE, "rb"))
@@ -81,6 +82,7 @@ if st.button("Recommend"):
     with col5:
         st.text(names[4])
         st.image(posters[4])
+
 
 
 
